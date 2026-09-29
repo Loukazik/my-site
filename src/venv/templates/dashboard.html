@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: linear-gradient(135deg, #11998e, #38ef7d); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .welcome-card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center; width: 100%; max-width: 500px; }
+        h1 { color: #2c3e50; margin-bottom: 15px; font-size: 28px; }
+        p { color: #7f8c8d; font-size: 16px; margin-bottom: 30px; }
+        .user-login { color: #11998e; font-weight: bold; }
+        .btn-logout { display: inline-block; padding: 12px 24px; background: #e74c3c; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .btn-logout:hover { background: #c0392b; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-card">
+        <!-- Flask автоматически подставит имя пользователя вместо {{ username }} -->
+        <h1>Здравствуйте, <span class="user-login">{{ username }}</span>!</h1>
+        <p>Вы успешно авторизовались на сайте. Это ваша личная титульная страница.</p>
+        
+        <a href="/logout" class="btn-logout">Выйти из системы</a>
+    </div>
+
+</body>
+</html>
